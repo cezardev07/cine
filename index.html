@@ -18,7 +18,7 @@
 
         <div class="main-video">
             <div class="video">
-                <video src="./video/atoms_-_13232 (1080p).mp4" controls muted autoplay loop></video>
+                <video src="./video/atoms_-_13232 (1080p).mp4" controls autoplay loop></video>
                 <h3 class="title">video intro atomic... </h3>
             </div>
         </div>
@@ -63,30 +63,6 @@
         </div>
 
     </div>
-
-    <script>
-        document.querySelector('h3.title').style.color='rgb(221, 8, 8)'
-        document.querySelector('h3.title').style.boxShadow='10px 10px 3000px 10px white';
-
-        let listVideo = document.querySelectorAll('.video-list .vid');
-        let mainVideo = document.querySelector('.main-video video');
-        let title = document.querySelector('.main-video .title');
-
-        listVideo.forEach(video =>{
-            video.onclick = () =>{
-                listVideo.forEach(vid => vid.classList.remove('active'));
-                video.classList.add('active');
-                if(video.classList.contains('active')){
-                    let src = video.children[0].getAttribute('src');
-                    mainVideo.src = src;
-
-                    let text = video.children[1].innerHTML;
-                    title.innerHTML = text;
-                };
-            };
-        });
-
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
